@@ -23,7 +23,7 @@ function App() {
 
       <button
         onClick={() => {
-          increment(10)
+          increment(20)
         }}
       >
         Incrementar de 10
