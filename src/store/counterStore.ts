@@ -21,6 +21,9 @@ export const useCounterStore = create<CounterState>((set) => ({
    increment: ( value: number ) => set(state => ({
       count: state.count + value
    })),
+   decrement: ( value: number ) => set(state => ({
+      count: state.count - value
+   })),
    getPosts: async () => {
       const res = await fetch('https://jsonplaceholder.typicode.com/posts')
       const posts = await res.json()

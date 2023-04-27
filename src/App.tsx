@@ -11,7 +11,7 @@ function App() {
       posts: state.posts
     }), shallow)
 
-  const { increment, getPosts } = useCounterStore()  
+  const { increment, getPosts, decrement } = useCounterStore()  
 
   useEffect(() => {
     getPosts()
@@ -26,7 +26,14 @@ function App() {
           increment(20)
         }}
       >
-        Incrementar de 10
+        Incrementar de 20
+      </button>
+      <button
+        onClick={() => {
+          decrement(10)
+        }}
+      >
+        Decremntar de 10
       </button>
       <hr />
       {JSON.stringify(posts)}
