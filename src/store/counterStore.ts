@@ -32,5 +32,8 @@ export const useCounterStore = create<CounterState>((set) => ({
          ...state,
          posts
       }))
+   },
+   clearStore: () => {
+      set({}, true)
    }
 }))
