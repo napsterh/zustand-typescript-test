@@ -12,7 +12,7 @@ function App() {
       posts: state.posts
     }), shallow)
 
-  const { increment, getPosts, decrement, clearStore } = useCounterStore()  
+  const { increment, getPosts, decrement, clearStore, multiply } = useCounterStore()  
 
   useEffect(() => {
     getPosts()
@@ -42,6 +42,13 @@ function App() {
         }}
       >
         Limpiar
+      </button>
+      <button
+        onClick={() => {
+          multiply(2)
+        }}
+      >
+        Multiplicador 
       </button>
       <hr />
       {JSON.stringify(posts)}
