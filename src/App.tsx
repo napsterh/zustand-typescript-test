@@ -1,6 +1,7 @@
+import { useEffect } from 'react'
 import { useCounterStore } from './store/counterStore'
 import shallow from 'zustand/shallow'
-import { useEffect } from 'react'
+
 
 
 function App() {

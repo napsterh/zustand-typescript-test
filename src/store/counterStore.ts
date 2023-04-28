@@ -1,4 +1,4 @@
-import create from 'zustand'
+import create from 'zustand';
 
 interface Post {
    id: number,
@@ -11,6 +11,7 @@ interface CounterState {
    title: string,
    posts: Post[]
    increment: ( value: number ) => void,
+   decrement: ( value: number ) => void,
    getPosts: () => Promise<void> 
 }
 
