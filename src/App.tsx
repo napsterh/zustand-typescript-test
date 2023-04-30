@@ -1,7 +1,6 @@
 import { useEffect } from 'react'
 import { useCounterStore } from './store/counterStore'
-import shallow from 'zustand/shallow'
-
+import shallow from 'zustand/shallow';
 
 
 function App() {
@@ -12,7 +11,12 @@ function App() {
       posts: state.posts
     }), shallow)
 
-  const { increment, getPosts, decrement, clearStore, multiply } = useCounterStore()  
+  const { increment,
+          getPosts,
+          decrement,
+          clearStore,
+          multiply
+        } = useCounterStore()  
 
   useEffect(() => {
     getPosts()
